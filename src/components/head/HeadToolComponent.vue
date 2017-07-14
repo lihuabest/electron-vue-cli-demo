@@ -2,16 +2,16 @@
     <div class="head-tool">
         <ul>
             <li>
-                <i class="iconfont">&#xe650;</i>
+                <i class="fa fa-external-link" aria-hidden="true"></i>
             </li>
             <li>
-                <i class="iconfont"  @click="handleWndow('window-minimize')">&#xe656;</i>
+                <i class="fa fa-minus" aria-hidden="true" @click="handleWndow('window-minimize')"></i>
             </li>
             <li>
-                <i class="iconfont"  @click="handleWndow('window-maximize')">&#xe662;</i>
+                <i class="fa fa-window-maximize" aria-hidden="true" @click="handleWndow('window-maximize')"></i>
             </li>
             <li>
-                <i class="iconfont" @click="handleWndow('window-close')">&#xe600;</i>
+                <i class="fa fa-times" aria-hidden="true" @click="handleWndow('window-close')"></i>
             </li>
         </ul>
     </div>

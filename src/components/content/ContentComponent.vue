@@ -1,6 +1,6 @@
 <template>
     <div class="content-container">
-        vue
+        <router-view></router-view>
     </div>
 </template>
 
@@ -12,6 +12,7 @@
 
 <style scope lang="scss">
     .content-container {
-        float: left;
+        padding: 0 20px;
+        margin-left: 200px;
     }
 </style>

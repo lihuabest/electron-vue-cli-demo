@@ -10,6 +10,12 @@
 <script>
     import './assets/styles/styles.css';
 
+    import './assets/styles/common.scss';
+
+    /* --------主题------- */
+    /* 红色主题 */
+    import './assets/styles/theme/red.scss';
+
     import HeadComponent from './components/head/HeadComponent.vue';
     import AsideComponent from './components/aside/AsideComponent.vue';
     import ContentComponent from './components/content/ContentComponent.vue';
@@ -19,7 +25,7 @@
         name: 'App',
         data: function () {
             return {
-                // theme: ''
+//                 theme: ''
             };
         },
         components: {
@@ -30,17 +36,18 @@
         },
         computed: {
             theme () {
-                return this.$store.getters.getTheme;
+//                return this.$store.getters.getTheme;
+                return 'theme-red';
             }
         },
         mounted: function() {
-            
+
         }
     }
 </script>
 
 <style lang="scss">
-    
+
 </style>
 
 

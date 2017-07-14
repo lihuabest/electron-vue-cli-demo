@@ -16,17 +16,27 @@ let win;
 function createWindow() {
     // 创建类似于浏览器的窗口
     win = new BrowserWindow({
-        width: 1024, 
+        width: 1024,
         height: 670,
         frame: false,
         // transparent: true, // 全透明了
         // titleBarStyle: 'hidden-inset', // window 无用
         x: 10,
         y: 200
-    }); 
+    });
 
     // 加载应用入口文件,本文件为测试文件,因此加载的是测试
     win.loadURL(`http://localhost:3001`);
+
+    // 正式环境
+    // win.loadURL(`file://${__dirname}/dist/index.html`);
+    // let url = require('url').format({
+    //     protocol: 'file',
+    //     slashes: true,
+    //     pathname: require('path').join(__dirname, '/dist/index.html')
+    // });
+
+    // win.loadURL(url)
 
     // 启动调试工具,如果是开发环境下则不需要开启
     win.webContents.openDevTools();

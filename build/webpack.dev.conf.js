@@ -31,6 +31,5 @@ module.exports = merge(baseWebpackConfig, {
       inject: true
     }),
     new FriendlyErrorsPlugin()
-  ],
-  target: 'electron-renderer'
+  ]
 })

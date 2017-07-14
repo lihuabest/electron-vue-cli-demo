@@ -1,7 +1,6 @@
 @import './reset.scss';
-@import './common.scss';
-@import './icon.scss';
+@import '../../../node_modules/font-awesome/css/font-awesome.min.css';
 
 /* --------主题------- */
 /* 红色主题 */
-@import './theme/red.scss';
+/*@import './theme/red.scss';*/

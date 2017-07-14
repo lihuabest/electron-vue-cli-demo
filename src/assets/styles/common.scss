@@ -1,4 +1,90 @@
+
+body,textarea,select,input,button {
+    font-size: 12px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-text-size-adjust: none;
+}
+
+/* 顶部拖拽 */
 .app-region-drag {
     -webkit-app-region: drag;
     user-select: none;
 }
+
+/* 颜色 */
+.white {
+    color: #fff;
+}
+
+/* 滚动条重置 */
+::-webkit-scrollbar {width: 6px;height:6px;}
+::-webkit-scrollbar-track-piece{background-color: #eee;margin: 0;}
+::-webkit-scrollbar-thumb{background: #C7D1DA;min-height: 150px;min-width: 150px;border-radius: 10px;}
+::-webkit-scrollbar-thumb:vertical:hover{background: #A2AAB2}
+::-webkit-scrollbar-thumb:horizontal:hover{background: #A2AAB2}
+
+$maxIndex: 30;
+$unit: 1px;
+@for $i from 0 through $maxIndex {
+    .pt#{$i} {
+        padding-top: $unit * $i;
+    }
+    .pr#{$i} {
+        padding-right: $unit * $i;
+    }
+    .pb#{$i} {
+        padding-bottom: $unit * $i;
+    }
+    .pl#{$i} {
+        padding-left: $unit * $i;
+    }
+    .ptb#{$i} {
+        padding: $unit * $i 0;
+    }
+    .plr#{$i} {
+        padding: auto $unit * $i;
+    }
+    .mt#{$i} {
+        margin-top: $unit * $i;
+    }
+    .mr#{$i} {
+        margin-right: $unit * $i;
+    }
+    .mb#{$i} {
+        margin-bottom: $unit * $i;
+    }
+    .ml#{$i} {
+        margin-left: $unit * $i;
+    }
+    .mtb#{$i} {
+        margin: $unit * $i 0;
+    }
+    .mlr#{$i} {
+        margin: auto $unit * $i;
+    }
+}
+$maxFontIndex: 30;
+$unitFont: 1px;
+@for $i from 8 through $maxFontIndex {
+    .f#{$i} {
+        font-size: $unitFont * $i;
+    }
+}
+.line>*{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+

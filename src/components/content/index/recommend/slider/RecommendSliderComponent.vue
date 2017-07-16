@@ -1,16 +1,15 @@
 /**
- * Created by LIHUA on 2017/7/13/013.
+ * Created by LIHUA on 2017/7/16.
  */
+
 <template>
-    <div>
-        <RecommendSliderComponent></RecommendSliderComponent>
-        <RecommendSonglistComponent></RecommendSonglistComponent>
-    </div>
+    <slider class="container" :pages="pages" :sliderinit="sliderinit">
+        <!-- slot  -->
+    </slider>
 </template>
 
 <script>
-    import RecommendSliderComponent from './slider/RecommendSliderComponent.vue';
-    import RecommendSonglistComponent from './songlist/RecommendSonglistComponent.vue';
+    import slider from 'vue-concise-slider';
 
     export default {
         data: function () {
@@ -39,7 +38,7 @@
                     currentPage: 0,//当前页码
                     thresholdDistance: 500, //滑动判定距离
                     thresholdTime: 100, //滑动判定时间
-                    autoplay: 3000, //自动滚动[ms]
+                    autoplay: 4000, //自动滚动[ms]
                     loop: true, //循环滚动
                     direction: 'horizontal',//方向设置，垂直滚动 horizontal vertical
                     infinite: 1, //无限滚动前后遍历数
@@ -48,13 +47,14 @@
             }
         },
         components: {
-            RecommendSliderComponent,
-            RecommendSonglistComponent
+            slider
         }
     }
 </script>
 
-<style scope lang="scss">
-
+<style lang="scss" scope>
+    .container {
+        width: 80%;
+        height: 190px;
+    }
 </style>
-
